@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Easy", "Easy", "{F4851A8D-508E-4425-8EA5-3A6A975FCFF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammingDistance", "HammingDistance\HammingDistance.csproj", "{2C1614ED-D31C-40CE-A569-6F6336D42BDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C1614ED-D31C-40CE-A569-6F6336D42BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1614ED-D31C-40CE-A569-6F6336D42BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1614ED-D31C-40CE-A569-6F6336D42BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1614ED-D31C-40CE-A569-6F6336D42BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C1614ED-D31C-40CE-A569-6F6336D42BDD} = {F4851A8D-508E-4425-8EA5-3A6A975FCFF8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B17DA87C-BFE4-444A-9BDC-BB83B2D7D3CC}
+	EndGlobalSection
+EndGlobal
