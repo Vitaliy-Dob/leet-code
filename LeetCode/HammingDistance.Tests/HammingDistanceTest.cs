@@ -12,7 +12,8 @@ namespace HammingDistance.Tests
         [InlineData(4, 1028, 1)]
         [InlineData(1, 1, 0)]
         [InlineData(15, 4, 3)]
-        public void Theory(int x, int y, int expectedResult)
+        [InlineData(4, 4, 0)]
+        public void HammingDistance_PositiveNumbers_FindHammingDistance(int x, int y, int expectedResult)
         {
             var result = HammingDistanceImplementation.HammingDistance(x, y);
             Assert.Equal(result, expectedResult);
