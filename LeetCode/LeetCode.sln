@@ -3,18 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Easy", "Easy", "{F4851A8D-508E-4425-8EA5-3A6A975FCFF8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2B2CC04-0C94-4B14-99B3-90C71FD506F7}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammingDistance.Tests", "HammingDistance.Tests\HammingDistance.Tests.csproj", "{8819CCCE-69EA-45D4-ADDE-EC78CAC9BDDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{36A23085-8A30-4BFF-90BE-F8529C9A77A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{36A23085-8A30-4BFF-90BE-F8529C9A77A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "LeetCode\LeetCode.csproj", "{2E2F499D-B3CE-4710-A0AA-1E63ACBE19D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoBinaryTrees.Tests", "MergeTwoBinaryTrees.Tests\MergeTwoBinaryTrees.Tests.csproj", "{E1B6526B-C11C-4740-BEC7-1F9DE0308BDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode.Tests", "LeetCode.Tests\LeetCode.Tests.csproj", "{EDC3E76C-6AE5-4EBE-9073-83F4D8170E5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,25 +20,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8819CCCE-69EA-45D4-ADDE-EC78CAC9BDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8819CCCE-69EA-45D4-ADDE-EC78CAC9BDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8819CCCE-69EA-45D4-ADDE-EC78CAC9BDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8819CCCE-69EA-45D4-ADDE-EC78CAC9BDDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36A23085-8A30-4BFF-90BE-F8529C9A77A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36A23085-8A30-4BFF-90BE-F8529C9A77A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36A23085-8A30-4BFF-90BE-F8529C9A77A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36A23085-8A30-4BFF-90BE-F8529C9A77A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1B6526B-C11C-4740-BEC7-1F9DE0308BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1B6526B-C11C-4740-BEC7-1F9DE0308BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1B6526B-C11C-4740-BEC7-1F9DE0308BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1B6526B-C11C-4740-BEC7-1F9DE0308BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2F499D-B3CE-4710-A0AA-1E63ACBE19D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2F499D-B3CE-4710-A0AA-1E63ACBE19D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2F499D-B3CE-4710-A0AA-1E63ACBE19D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2F499D-B3CE-4710-A0AA-1E63ACBE19D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC3E76C-6AE5-4EBE-9073-83F4D8170E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC3E76C-6AE5-4EBE-9073-83F4D8170E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC3E76C-6AE5-4EBE-9073-83F4D8170E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC3E76C-6AE5-4EBE-9073-83F4D8170E5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{8819CCCE-69EA-45D4-ADDE-EC78CAC9BDDD} = {F4851A8D-508E-4425-8EA5-3A6A975FCFF8}
-		{E1B6526B-C11C-4740-BEC7-1F9DE0308BDA} = {F4851A8D-508E-4425-8EA5-3A6A975FCFF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B17DA87C-BFE4-444A-9BDC-BB83B2D7D3CC}
