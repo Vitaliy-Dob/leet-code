@@ -12,3 +12,5 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 Given a binary tree, find its maximum depth.
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 Note: A leaf is a node with no children.
+# 226. Invert Binary Tree
+Invert a binary tree.
