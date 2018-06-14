@@ -9,7 +9,7 @@ namespace MergeTwoBinaryTrees.Tests
     public class MergeTwoBinaryTreesTests
     {
         [Fact]
-        public void MergeTwoBinaryTrees_FromLeetCode_Merge()
+        public void MergeTwoBinaryTrees_FromLeetCode_ShouldMerge()
         {
             var tree1 = new TreeNode(1);
             tree1.left = new TreeNode(3);
@@ -34,7 +34,7 @@ namespace MergeTwoBinaryTrees.Tests
         }
 
         [Fact]
-        public void MergeTwoBinaryTrees_EmptyTrees_ReturnEmptyTree()
+        public void MergeTwoBinaryTrees_EmptyTrees_ShouldReturnEmptyTree()
         {
             TreeNode tree1 = null;
             TreeNode tree2 = null;

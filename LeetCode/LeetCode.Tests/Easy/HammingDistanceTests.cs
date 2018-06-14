@@ -5,7 +5,7 @@ using Xunit;
 
 namespace HammingDistance.Tests
 {
-    public class HammingDistanceTest
+    public class HammingDistanceTests
     {
         [Theory]
         [InlineData(1, 4, 2)]
@@ -13,10 +13,10 @@ namespace HammingDistance.Tests
         [InlineData(1, 1, 0)]
         [InlineData(15, 4, 3)]
         [InlineData(4, 4, 0)]
-        public void HammingDistance_PositiveNumbers_FindHammingDistance(int x, int y, int expectedResult)
+        public void HammingDistance_Theory_ShouldFindHammingDistance(int x, int y, int expectedResult)
         {
             var result = HammingDistanceImplementation.HammingDistance(x, y);
-            Assert.Equal(result, expectedResult);
+            Assert.Equal(expectedResult, result);
         }
     }
 }
