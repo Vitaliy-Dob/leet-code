@@ -14,3 +14,5 @@ The maximum depth is the number of nodes along the longest path from the root no
 Note: A leaf is a node with no children.
 # 226. Invert Binary Tree
 Invert a binary tree.
+# 283. Move Zeroes
+Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
