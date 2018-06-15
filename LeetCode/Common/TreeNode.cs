@@ -18,16 +18,9 @@ namespace Common
             if (treeToCompare == null)
                 return false;
 
-            if (left != null && right != null)
-                return left.Equals(treeToCompare.left) && right.Equals(treeToCompare.right);
-
-            if (left != null)
-                return left.Equals(treeToCompare.left);
-
-            if (right != null)
-                return right.Equals(treeToCompare.right);
-
-            return true;
+            return (val == treeToCompare.val)
+                && ((left == null && treeToCompare.left == null) || (left != null && left.Equals(treeToCompare.left)))
+                && ((right == null && treeToCompare.right == null) || (right != null && right.Equals(treeToCompare.right)));
         }
     }
 }
