@@ -1,4 +1,4 @@
-# 461. Hamming Distance
+﻿# 461. Hamming Distance
 The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
 Given two integers x and y, calculate the Hamming distance.
 # 617. Merge Two Binary Trees
@@ -16,3 +16,7 @@ Note: A leaf is a node with no children.
 Invert a binary tree.
 # 283. Move Zeroes
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+# 448. Find All Numbers Disappeared in an Array
+Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
