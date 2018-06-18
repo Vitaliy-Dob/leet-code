@@ -7,28 +7,52 @@ namespace LeetCode.Easy
 {
     public static class ConvertBSTImplementation
     {
+        //Reverse Morris In-order Traversal
         public static TreeNode ConvertBST(TreeNode root)
         {
-            Convert(root, 0);
+            var node = root;
+            int sum = 0;
+
+            while (node != null)
+            {
+                if (node.right == null)
+                {
+                    node.val += sum;
+                    sum = node.val;
+                    node = node.left;
+                }
+                else
+                {
+                    var successor = getSuccessor(node);
+
+                    if (successor.left == null)
+                    {
+                        successor.left = node;
+                        node = node.right;
+                    }
+                    else
+                    {
+                        successor.left = null;
+                        node.val += sum;
+                        sum = node.val;
+                        node = node.left;
+                    }
+                }
+            }
+
             return root;
         }
 
-        public static void Convert(TreeNode root, int sum)
+        private static TreeNode getSuccessor(TreeNode node)
         {
-            if (root == null)
-                return;
+            var n = node.right;
 
-            root.val += sum + Sum(root.right);
-            Convert(root.left, root.val);
-            Convert(root.right, sum);
-        }
+            while (n.left != null && n.left != node)
+            {
+                n = n.left;
+            }
 
-        private static int Sum(TreeNode leaf)
-        {
-            if (leaf == null)
-                return 0;
-
-            return leaf.val + Sum(leaf.left) + Sum(leaf.right);
+            return n;
         }
     }
 }
