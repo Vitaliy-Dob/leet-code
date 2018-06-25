@@ -24,3 +24,5 @@ Could you do it without extra space and in O(n) runtime? You may assume the retu
 Given a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus sum of all keys greater than the original key in BST.
 # 206. Reverse Linked List
 Reverse a singly linked list.
+# 543. Diameter of Binary Tree
+Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
