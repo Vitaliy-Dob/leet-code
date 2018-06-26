@@ -8,21 +8,22 @@ namespace LeetCode.Easy
     {
         public static int MaxProfit(int[] prices)
         {
-            int result = 0;
+            int profit = 0;
+            int miValue = int.MaxValue;
 
             for (var i = 0; i < prices.Length; i++)
             {
-                for (var j = i + 1; j < prices.Length; j++)
+                if (prices[i] < miValue)
                 {
-                    int r = prices[i] - prices[j];
-                    if (r < 0)
-                    {
-                        result = Math.Max(result, Math.Abs(r));
-                    }
+                    miValue = prices[i];
+                }
+                else if (prices[i] - miValue > profit)
+                {
+                    profit = prices[i] - miValue;
                 }
             }
 
-            return result;
+            return profit;
         }
     }
 }
