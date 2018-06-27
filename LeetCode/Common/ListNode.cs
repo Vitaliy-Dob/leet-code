@@ -21,5 +21,22 @@ namespace Common
 
             return val == node.val && ((next == null && node.next == null) || (next != null && next.Equals(node.next)));
         }
+
+        public static ListNode CreateList(int[] vals)
+        {
+            if (vals == null)
+                return null;
+
+            var root = new ListNode(vals[0]);
+            var current = root;
+
+            for (var i = 1; i < vals.Length; i++)
+            {
+                current.next = new ListNode(vals[i]);
+                current = current.next;
+            }
+
+            return root;
+        }
     }
 }
