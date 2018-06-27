@@ -9,48 +9,23 @@ namespace LeetCode.Easy
     {
         public static ListNode MergeTwoLists(ListNode l1, ListNode l2)
         {
-            ListNode result = null;
-            ListNode currentResult = null;
-            var current1 = l1;
-            var current2 = l2;
-
-            while (current1 != null || current2 != null)
+            if (l1 == null)
+                return l2;
+            if (l2 == null)
+                return l1;
+            if (l1.val <= l2.val)
+                l1.next = MergeTwoLists(l1.next, l2);
+            else
             {
-                if ((current2 == null && current1 != null) || (current1 != null && current1.val <= current2.val))
-                {
-                    if (currentResult == null)
-                    {
-                        result = new ListNode(current1.val);
-                        currentResult = result;
-                    }
-                    else
-                    {
-                        currentResult.next = new ListNode(current1.val);
-                        currentResult = currentResult.next;
-                    }
-
-                    current1 = current1.next;
-                    continue;
-                }
-
-                if ((current1 == null && current2 != null) || (current2 != null && current2.val < current1.val))
-                {
-                    if (currentResult == null)
-                    {
-                        result = new ListNode(current2.val);
-                        currentResult = result;
-                    }
-                    else
-                    {
-                        currentResult.next = new ListNode(current2.val);
-                        currentResult = currentResult.next;
-                    }
-
-                    current2 = current2.next;
-                }
+                var temp = l1.val;
+                l1.val = l2.val;
+                var tempNext = l1.next;
+                l1.next = new ListNode(temp);
+                l1.next.next = tempNext;
+                l1.next = MergeTwoLists(l1.next, l2.next);
             }
 
-            return result;
+            return l1;
         }
     }
 }
