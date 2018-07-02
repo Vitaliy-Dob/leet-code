@@ -28,7 +28,34 @@ namespace LeetCode.Easy
 
         public static bool IsSymmetricIterative(TreeNode root)
         {
-            throw new NotImplementedException();
+            if (root == null)
+                return true;
+
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root.left);
+            queue.Enqueue(root.right);
+
+            while(queue.Count > 0)
+            {
+                var first = queue.Dequeue();
+                var second = queue.Dequeue();
+
+                if ((first != null && second == null) || (first == null && second != null))
+                    return false;
+
+                if (first == null && second == null)
+                    continue;
+
+                if (first.val != second.val)
+                    return false;
+
+                queue.Enqueue(first.left);
+                queue.Enqueue(second.right);
+                queue.Enqueue(first.right);
+                queue.Enqueue(second.left);
+            }
+
+            return true;
         }
     }
 }
