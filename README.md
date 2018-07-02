@@ -39,3 +39,6 @@ Merge two sorted linked lists and return it as a new list. The new list should b
 You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 Note: Given n will be a positive integer.
+# 101. Symmetric Tree
+Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+Bonus points if you could solve it both recursively and iteratively.

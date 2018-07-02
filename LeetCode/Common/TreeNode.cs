@@ -22,5 +22,43 @@ namespace Common
                 && ((left == null && treeToCompare.left == null) || (left != null && left.Equals(treeToCompare.left)))
                 && ((right == null && treeToCompare.right == null) || (right != null && right.Equals(treeToCompare.right)));
         }
+
+        public static TreeNode CreateTree(int?[] vals)
+        {
+            try
+            {
+                var tree = new TreeNode(vals[0].Value);
+                var queue = new Queue<TreeNode>();
+                queue.Enqueue(tree);
+                var counter = 1;
+
+                while (queue.Count > 0)
+                {
+                    var node = queue.Dequeue();
+
+                    if (counter < vals.Length && vals[counter] != null)
+                    {
+                        node.left = new TreeNode(vals[counter].Value);
+                        queue.Enqueue(node.left);
+                    }
+
+                    counter++;
+
+                    if (counter < vals.Length && vals[counter] != null)
+                    {
+                        node.right = new TreeNode(vals[counter].Value);
+                        queue.Enqueue(node.right);
+                    }
+
+                    counter++;
+                }
+
+                return tree;
+            }
+            catch
+            {
+                throw new ArgumentException("invalid tree declaration");
+            }
+        }
     }
 }
