@@ -13,19 +13,18 @@ namespace LeetCode.Easy
                 return l2;
             if (l2 == null)
                 return l1;
-            if (l1.val <= l2.val)
-                l1.next = MergeTwoLists(l1.next, l2);
-            else
+            if (l1.val < l2.val)
             {
-                var temp = l1.val;
-                l1.val = l2.val;
-                var tempNext = l1.next;
-                l1.next = new ListNode(temp);
-                l1.next.next = tempNext;
-                l1.next = MergeTwoLists(l1.next, l2.next);
+                l1.next = MergeTwoLists(l1.next, l2);
+                return l1;
+            }
+            if (l1.val >= l2.val)
+            {
+                l2.next = MergeTwoLists(l1, l2.next);
+                return l2;
             }
 
-            return l1;
+            return null;
         }
     }
 }
