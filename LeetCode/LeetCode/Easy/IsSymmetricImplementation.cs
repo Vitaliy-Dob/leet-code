@@ -35,7 +35,7 @@ namespace LeetCode.Easy
             queue.Enqueue(root.left);
             queue.Enqueue(root.right);
 
-            while(queue.Count > 0)
+            while (queue.Count > 0)
             {
                 var first = queue.Dequeue();
                 var second = queue.Dequeue();
