@@ -42,3 +42,5 @@ Note: Given n will be a positive integer.
 # 101. Symmetric Tree
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 Bonus points if you could solve it both recursively and iteratively.
+# 53. Maximum Subarray
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
