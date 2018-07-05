@@ -8,17 +8,23 @@ namespace LeetCode.Easy
     {
         public static int MaxSubArray(int[] nums)
         {
-            var result = int.MinValue;
+            int result = int.MinValue;
+            int previousMax = 0;
 
             for (var i = 0; i < nums.Length; i++)
             {
-                var temp = nums[i];
-                result = Math.Max(temp, result);
-
-                for (var j = i + 1; j < nums.Length; j++)
+                if (previousMax + nums[i] > result)
                 {
-                    temp = temp + nums[j];
-                    result = Math.Max(temp, result);
+                    result = previousMax + nums[i];
+                }
+
+                if (previousMax + nums[i] > 0)
+                {
+                    previousMax = previousMax + nums[i];
+                }
+                else
+                {
+                    previousMax = 0;
                 }
             }
 
