@@ -8,15 +8,17 @@ namespace LeetCode.Easy
     {
         public static int Rob(int[] nums)
         {
-            return Calculate(0, nums);
-        }
+            int robbed = 0;
+            int notRobbed = 0;
 
-        private static int Calculate(int n, int[] nums)
-        {
-            if (n > nums.Length - 1)
-                return 0;
+            for (var i = 0; i < nums.Length; i++)
+            {
+                var tempNotRobbe = notRobbed;
+                notRobbed = Math.Max(robbed, notRobbed);
+                robbed = tempNotRobbe + nums[i];
+            }
 
-            return Math.Max(nums[n] + Calculate(n + 2, nums), Calculate(n + 1, nums));
+            return Math.Max(robbed, notRobbed);
         }
     }
 }
