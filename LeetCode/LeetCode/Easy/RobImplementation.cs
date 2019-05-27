@@ -13,9 +13,9 @@ namespace LeetCode.Easy
 
             for (var i = 0; i < nums.Length; i++)
             {
-                var tempNotRobbe = notRobbed;
+                var tempNotRobbed = notRobbed;
                 notRobbed = Math.Max(robbed, notRobbed);
-                robbed = tempNotRobbe + nums[i];
+                robbed = tempNotRobbed + nums[i];
             }
 
             return Math.Max(robbed, notRobbed);
