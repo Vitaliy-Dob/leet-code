@@ -17,17 +17,29 @@ namespace LeetCode.Easy
                 dict[p[i]] = dict.GetValueOrDefault(p[i]) + 1;
             }
 
-            int left = 0, right = 0, length = p.Length - 1;
+            int left = 0, right = 0, length = p.Length - 1, count = dict.Count;
 
             for (; right < s.Length; right++)
             {
-                dict[s[right]] = dict.GetValueOrDefault(s[right]) - 1;
+                if (dict.ContainsKey(s[right]))
+                {
+                    dict[s[right]] = --dict[s[right]];
+                    if (dict[s[right]] == 0)
+                        count--;
+                }
 
                 if (right - left == length)
                 {
-                    if (dict.Values.All(x => x == 0))
+                    if (count == 0)
                         result.Add(left);
-                    dict[s[left]] = dict.GetValueOrDefault(s[left]) + 1;
+
+                    if (dict.ContainsKey(s[left]))
+                    {
+                        dict[s[left]] = ++dict[s[left]];
+                        if (dict[s[left]] == 1)
+                            count++;
+                    }
+
                     left++;
                 }
             }
