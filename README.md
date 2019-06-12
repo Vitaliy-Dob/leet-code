@@ -63,3 +63,9 @@ The path does not need to start or end at the root or a leaf, but it must go dow
 The tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000.
 # 141. Linked List Cycle
 Given a linked list, determine if it has a cycle in it.
+# 20. Valid Parentheses
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Note that an empty string is also considered valid.
