@@ -9,44 +9,20 @@ namespace LeetCode.Easy
     {
         public static int FindUnsortedSubarray(int[] nums)
         {
-            if (nums.Length == 0)
-                return 0;
-
-            var left = 0;
-            var right = 0;
-            var prevMax = nums[0];
-            bool wasFound = false;
+            var left = -1;
+            var right = -2;
+            var min = nums[nums.Length - 1];
+            var max = nums[0];
 
             for (var i = 1; i < nums.Length; i++)
             {
-                if (nums[i] < prevMax)
-                {
-                    wasFound = true;
-                    right = i;
-
-                    for (; left >= 0; left--)
-                    {
-                        if (nums[left] <= nums[i])
-                        {
-                            break;
-                        }
-                    }
-                }
-
-                if (!wasFound)
-                {
-                    right = i;
-                    left = i;
-                }
-                prevMax = Math.Max(prevMax, nums[i]);
+                max = Math.Max(max, nums[i]);
+                min = Math.Min(min, nums[nums.Length - 1 - i]);
+                if (nums[i] < max) right = i;
+                if (nums[nums.Length - 1 - i] > min) left = nums.Length - 1 - i;
             }
 
-            if (wasFound)
-            {
-                return right - left;
-            }
-
-            return 0;
+            return right - left + 1;
         }
     }
 }
