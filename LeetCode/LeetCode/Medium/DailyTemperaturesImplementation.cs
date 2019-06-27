@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace LeetCode.Medium
@@ -9,29 +10,16 @@ namespace LeetCode.Medium
         public static int[] DailyTemperatures(int[] T)
         {
             var result = new int[T.Length];
-            for (var i = T.Length - 2; i >= 0; i--)
+            var stack = new Stack<int>();
+
+            for (var i = 0; i < T.Length; i++)
             {
-                var next = i + 1;
-
-                while (true)
+                while (stack.Any() && T[i] > T[stack.Peek()])
                 {
-                    if (T[i] >= T[next] && result[next] == 0)
-                    {
-                        result[i] = 0;
-                        break;
-                    }
-
-                    if (T[i] < T[next])
-                    {
-                        result[i] = next - i;
-                        break;
-                    }
-
-                    if (T[i] >= T[next])
-                    {
-                        next += result[next];
-                    }
+                    var s = stack.Pop();
+                    result[s] = i - s;
                 }
+                stack.Push(i);
             }
 
             return result;
