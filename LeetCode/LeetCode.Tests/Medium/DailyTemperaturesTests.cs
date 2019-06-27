@@ -15,7 +15,7 @@ namespace LeetCode.Tests.Medium
         {
             var result = DailyTemperaturesImplementation.DailyTemperatures(temperatures);
 
-            result.Should().BeEquivalentTo(expectedResult);
+            result.Should().BeEquivalentTo(expectedResult, options => options.WithStrictOrdering());
         }
 
         public static IEnumerable<object[]> TestData =>
