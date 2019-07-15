@@ -82,3 +82,6 @@ For example, given the list of temperatures T = [73, 74, 75, 71, 69, 72, 76, 73]
 # 406. Queue Reconstruction by Height
 Suppose you have a random list of people standing in a queue. 
 Each person is described by a pair of integers (h, k), where h is the height of the person and k is the number of people in front of this person who have a height greater than or equal to h. Write an algorithm to reconstruct the queue.
+# 647. Palindromic Substrings
+Given a string, your task is to count how many palindromic substrings in this string.
+The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
