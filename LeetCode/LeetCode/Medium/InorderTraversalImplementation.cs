@@ -17,32 +17,22 @@ namespace LeetCode.Medium
 
             var stack = new Stack<TreeNode>();
             stack.Push(root);
-            bool bottomDirection = true;
 
             while (stack.Any())
             {
-                if (bottomDirection)
+                while (root.left != null)
                 {
-                    var node = stack.Peek();
-                    if (node.left != null)
-                    {
-                        stack.Push(node.left);
-                        bottomDirection = true;
-                        continue;
-                    }
-
-                    bottomDirection = false;
-                    continue;
+                    stack.Push(root.left);
+                    root = root.left;
                 }
-                else
+
+                var node = stack.Pop();
+                result.Add(node.val);
+
+                if (node.right != null)
                 {
-                    var node = stack.Pop();
-                    result.Add(node.val);
-                    if (node.right != null)
-                    {
-                        stack.Push(node.right);
-                        bottomDirection = true;
-                    }
+                    stack.Push(node.right);
+                    root = node.right;
                 }
             }
 
