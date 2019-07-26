@@ -87,3 +87,5 @@ Given a string, your task is to count how many palindromic substrings in this st
 The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
 # 94. Binary Tree Inorder Traversal
 Given a binary tree, return the inorder traversal of its nodes' values.
+# 46. Permutations
+Given a collection of distinct integers, return all possible permutations.
