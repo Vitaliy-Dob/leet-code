@@ -15,7 +15,7 @@ namespace LeetCode.Medium
 
         private static void Permute(List<IList<int>> result, int[] nums, List<int> permutation)
         {
-            if(permutation.Count == nums.Length)
+            if (permutation.Count == nums.Length)
             {
                 result.Add(permutation.ToArray());
                 return;
