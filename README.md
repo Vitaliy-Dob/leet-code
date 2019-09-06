@@ -89,3 +89,7 @@ The substrings with different start indexes or end indexes are counted as differ
 Given a binary tree, return the inorder traversal of its nodes' values.
 # 46. Permutations
 Given a collection of distinct integers, return all possible permutations.
+# 22. Generate Parentheses
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+347. Top K Frequent Elements
+Given a non-empty array of integers, return the k most frequent elements.
