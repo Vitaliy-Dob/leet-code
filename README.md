@@ -91,5 +91,7 @@ Given a binary tree, return the inorder traversal of its nodes' values.
 Given a collection of distinct integers, return all possible permutations.
 # 22. Generate Parentheses
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
-347. Top K Frequent Elements
+# 347. Top K Frequent Elements
 Given a non-empty array of integers, return the k most frequent elements.
+# 238. Product of Array Except Self
+Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
