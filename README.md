@@ -99,3 +99,6 @@ Given an array nums of n integers where n > 1,  return an array output such that
 Given a set of distinct integers, nums, return all possible subsets (the power set).
 # 287. Find the Duplicate Number
 Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
+# 39. Combination Sum
+Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
