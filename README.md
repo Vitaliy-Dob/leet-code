@@ -97,3 +97,5 @@ Given a non-empty array of integers, return the k most frequent elements.
 Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
 # 78. Subsets
 Given a set of distinct integers, nums, return all possible subsets (the power set).
+# 287. Find the Duplicate Number
+Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
