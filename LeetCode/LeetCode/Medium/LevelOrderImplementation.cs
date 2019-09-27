@@ -12,30 +12,26 @@ namespace LeetCode.Medium
             var result = new List<IList<int>>();
             if (root == null)
                 return result;
-            var queue = new Queue<(int, TreeNode)>();
-            var currentLevel = 1;
-            queue.Enqueue((currentLevel, root));
-            var level = new List<int>();
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
 
             while (queue.Any())
             {
-                var node = queue.Dequeue();
-                if (node.Item1 != currentLevel)
+                var queueLength = queue.Count;
+                var level = new List<int>();
+
+                for (var i = 0; i < queueLength; i++)
                 {
-                    result.Add(level);
-                    level = new List<int>();
-                    currentLevel = currentLevel + 1;
+                    var node = queue.Dequeue();
+                    if (node.left != null)
+                        queue.Enqueue(node.left);
+                    if (node.right != null)
+                        queue.Enqueue(node.right);
+                    level.Add(node.val);
                 }
 
-                level.Add(node.Item2.val);
-
-                if (node.Item2.left != null)
-                    queue.Enqueue((currentLevel + 1, node.Item2.left));
-                if (node.Item2.right != null)
-                    queue.Enqueue((currentLevel + 1, node.Item2.right));
+                result.Add(level);
             }
-
-            result.Add(level);
 
             return result;
         }
