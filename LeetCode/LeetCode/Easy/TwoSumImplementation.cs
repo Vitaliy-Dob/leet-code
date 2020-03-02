@@ -8,23 +8,22 @@ namespace LeetCode.Easy
     {
         public static int[] TwoSum(int[] nums, int target)
         {
+            var result = new int[2];
             var dict = new Dictionary<int, int>();
 
             for (var i = 0; i < nums.Length; i++)
             {
-                var numberToFind = target - nums[i];
-                if (dict.TryGetValue(numberToFind, out int j))
-                    return new int[] { j, i };
-                else
+                if (dict.TryGetValue(nums[i], out var j))
                 {
-                    if (!dict.ContainsKey(nums[i]))
-                    {
-                        dict.Add(nums[i], i);
-                    }
+                    result[0] = j;
+                    result[1] = i;
+                    break;
                 }
+
+                dict[target - nums[i]] = i;
             }
 
-            throw new ArgumentException();
+            return result;
         }
     }
 }
